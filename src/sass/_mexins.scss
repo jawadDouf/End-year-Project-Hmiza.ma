@@ -1,0 +1,36 @@
+@import "@/sass/variables.scss";
+@mixin flex($direction:column,$justify-content:center,$aligin-items:center) {
+   display: flex;
+   flex-direction: $direction; 
+   justify-content: $justify-content;
+   align-items: $aligin-items;
+}
+@mixin text($font-size:$primary-size){
+    font-family: $primary-font;
+    font-size: $font-size;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+@mixin button($vertical-padding:8px,$horizontal-padding:70px,$border-radius:4px) {
+   padding: $vertical-padding $horizontal-padding;
+   color : white;
+   background-color: $primary-color;
+   border: none;
+   border-radius: $border-radius;
+   cursor: pointer;
+   background-color: $primary-color;
+    &:hover{
+         background-color: $secondary-color;
+    }
+}
+@mixin input($vertical-padding:8px,$width:100%){
+    padding: 8px 6px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+    outline: none;
+    &:hover{
+      border : $primary-color 2px solid;   
+    }
+}
