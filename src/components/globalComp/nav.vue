@@ -7,7 +7,9 @@
     <li>Produits</li>
     <li>Profile</li>
     <li>A propos</li>
-    <li><button>Register</button></li>
+    <li><button>   
+    Register
+    </button></li>
   </ul> 
   <div class="cover">
     <div class="cover-leftSide">
@@ -124,10 +126,14 @@ export default {
   
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/sass/variables.scss";
 @import "@/sass/mexins.scss";
 @import "@/sass/mediaquerise.scss";
+.router{
+ text-decoration: none;
+ color:$primary-color;
+}
 #nav{
 font-family: $primary-font;
 background-color: #2D4487;
