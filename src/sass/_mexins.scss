@@ -23,14 +23,22 @@
          background-color: $secondary-color;
     }
 }
-@mixin input($vertical-padding:8px,$width:100%){
-    padding: 8px 6px;
+@mixin input($width:100%){
+    padding-block: 5px;
+    padding-left: 1px ;
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #000;
-    color: #000;
-    outline: none;
-    &:hover{
-      border : $primary-color 2px solid;   
+    background-color: rgba(128, 128, 128, 0.409);
+    color: white;
+    outline: white;
+    border:  none;
+    &:focus{
+        outline:white solid 1px;
     }
+}
+@mixin label(){
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-block: 3px;
+
 }
