@@ -1,19 +1,13 @@
 <template>
   <nav>
-    
+  
   </nav>
   <router-view/>
 </template>
-<script>
-import Nav from '@/components/globalComp/nav.vue';
-import Footer from './components/globalComp/footer.vue';
+<script setup>
 
-export default {
-components : {
-  Nav,
-Footer
-}
-}
+
+
 </script>
 
 <style lang="scss">

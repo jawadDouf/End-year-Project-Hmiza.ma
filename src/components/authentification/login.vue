@@ -20,7 +20,7 @@
         <button :class="login.button">Login</button>
         <div :class="login.registration">
         <p :class="login.register">No Account ?</p>
-        <a :class="login.register">Register</a>
+        <a :class="login.register" @click="$emit('changePage')">Register</a>
         </div>
        </div>       
   </form>
@@ -32,6 +32,7 @@
 <script setup>
 import login from "../../modulescss/authentification/login.scss"
 
+const emits = defineEmits(['changePage'])
 </script>
 
 <style lang="scss">

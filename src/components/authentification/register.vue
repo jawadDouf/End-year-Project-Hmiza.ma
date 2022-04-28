@@ -2,8 +2,7 @@
    <div :class="register.container">
       <h1 :class="register.container_title">Register</h1>
       <form :class="register.container_form">
-       <!-- nom et prenom -->
-       
+       <!-- nom et prenom -->   
        <div :class="register.field">
        <label :class="register.label">nom:</label>
        <input :class="register.input" type="text"  required>    
@@ -31,11 +30,9 @@
         <button :class="register.button">Register</button>
         <div :class="register.login">
          <p :class="register.par">Already Registered?</p>
-        <a :class="register.a">Login</a>
+        <a @click="$emit('changePage')" :class="register.a" >Login</a>
         </div>
-        
        </div>
-       
     </form>
    </div>
    
@@ -43,7 +40,14 @@
 
 <script setup>
 import register from "../../modulescss/authentification/register.scss"
+const props = defineProps({
+   authCond : Boolean
+ });
+const emits = defineEmits(['changePage']);
 
+
+
+ 
 </script>
 
 <style>

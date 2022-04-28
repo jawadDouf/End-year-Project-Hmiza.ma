@@ -1,7 +1,10 @@
 <template>
+   <div :class="$style.container">
    <div :class="$style.overlay"></div>
-   <Login v-if="!authCond"/>
-   <Register v-if="authCond"/>
+   <Login v-if="!authCond" @changePage="changeform"/>
+   <Register v-if="authCond" :authCond="authCond" @changePage="changeform"/>
+   </div>
+   
 </template>
 
 <script setup>
@@ -10,14 +13,15 @@ import Register from "../components/authentification/register.vue"
 import {ref} from 'vue' 
 
    let authCond = ref(true);
- 
-
+const changeform = () => {
+  authCond.value = !authCond.value;
+}
 
 
 </script>
 
-<style lang="scss" module>
-body{
+<style lang="scss"  module>
+.container{
   height:100vh;
   width:100vw;
   background: url("@/assets/loginPic.webp") ;

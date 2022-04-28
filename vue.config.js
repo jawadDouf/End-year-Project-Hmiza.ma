@@ -11,12 +11,12 @@ module.exports = {
         }
       }
     },
-    sass: {
-      data: `
-        @import "@/sass/_variables.scss";
-        @import "@/sass/_mexins.scss";
-        @import "@/sass/mediaqueries.scss;
-      `
-    }
+    // sass: {
+    //   data: `
+    //     @import "@/sass/_variables.scss";
+    //     @import "@/sass/_mexins.scss";
+    //     @import "@/sass/mediaqueries.scss;
+    //   `
+    // }
   }
 }
