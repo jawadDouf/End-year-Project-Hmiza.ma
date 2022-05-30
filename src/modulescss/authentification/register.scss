@@ -1,42 +1,17 @@
 @import "@/sass/variables.scss";
 @import "@/sass/mexins.scss";
 @import "@/sass/mediaquerise.scss";
-.container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    height: 450px;
-    box-shadow: black 0px 0px 10px;
-    @include flex();
-    color: white;
-    background-color: hsla(0, 0%, 0%, 0);
+
 .container_title{
     margin-top: 20px;
 }
 .container_form{
     width: 70%;
 
-.field{
- margin-block: 15px;
-.button{
-    @include button;
-    width: 100%;
-    background-color: #4c41c0;
-}
-.login{
-   margin-block: 20px;
-.par{
-   display: inline;
-  }
-.a{
-    margin-left: 30%;
-    cursor: pointer;
-    
-  }
-  }
-}
+
+
+
+       }
 .label{
 @include label
  
@@ -44,7 +19,26 @@
 .input{
   @include input;
 }
-       }
+.field{
+ margin-block: 15px;
 
 
 }
+.button{
+    @include button;
+    width: 100%;
+    background-color: #4c41c0;
+}
+.a{
+    margin-left: 30%;
+    cursor: pointer;
+    
+  }
+.par{
+   display: inline;
+  }
+.login{
+   margin-block: 20px;
+
+
+  }

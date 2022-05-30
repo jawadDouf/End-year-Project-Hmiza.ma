@@ -1,17 +1,23 @@
 <template>
-  
-  <div id="nav">
-  <ul>
-    <li>Logo</li>
+<div class="nav">
+ <img class="img" src="../../assets/Group3.png" alt="">
+ <ul class="ul">
     <li>Acceuil</li>
     <li>Produits</li>
     <li>Profile</li>
-    <li>A propos</li>
-    <li><button>   
+    <li>About</li>
+  </ul>  
+    <!-- <li><button :class="index.button">   
     Register
-    </button></li>
-  </ul> 
-  <div class="cover">
+    </button></li> -->
+   
+   <div class="search_box" id="search_box">
+    <fa :icon="['fas','search']" class="search_box__icon" @click="activateSearch"/>
+    <input class="search_box__input" placeholder="Título, personas, generos"/>
+    </div>
+ </div>
+  
+  <!-- <div class="cover">
     <div class="cover-leftSide">
      <h1>Samsung Galaxy Note 10+ with<br>256 GB (U.S. Warranty), Aura<br> Black/ Note10+ (Renewed)</h1>
      <p>Contrary to popular belief, Lorem Ipsum is not<br> simply random text. It has roots in a piece of<br>classical Latin literature from 45 BC, making it<br>  has roots in a piece of classical Latin literature<br> from 45 BC, making it </p>
@@ -19,7 +25,7 @@
     </div>
     <div class="cover-rightSide">
     
-    <img src="@/assets/coverFirstImage.png" alt="phone image" />
+    <img src="../../../../backend/public/Img/coverFirstImage.png" alt="phone image" />
     <div class="nav-prices">
   <div class="onePrice">
   <fa :icon="['fab','amazon']" class="amazon"/>
@@ -46,7 +52,7 @@
  
   </div>
    <br>
-  </div>
+  </div> -->
  
 
 </template>
@@ -55,7 +61,7 @@
 
 
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/sass/variables.scss";
 @import "@/sass/mexins.scss";
 @import "@/sass/mediaquerise.scss";
@@ -63,82 +69,77 @@
  text-decoration: none;
  color:$primary-color;
 }
-#nav{
-font-family: $primary-font;
-background-color: #2D4487;
-height:auto;
-width: 95%;
-margin: auto;
-border-radius: 10px;
-margin-top:10px;
+.nav{
+    font-family: $primary-font;
+    background-color: hsla(225, 50%, 35%, 1);
+    width: 100%;
+    margin: auto;
+    border-radius: 0;
+    margin-top:0px;
+    @include flex($direction:row,$justify-content:flex-start);
+    gap: 12%;
+    padding-block:15px;
 ul{
- font-weight: 500;
- padding-top:20px;
- list-style: none;
- @include flex($direction:row);
- gap: 10%;
- color: white;
-button{
- @include button($horizontal-padding:20px);
- background-color: white;
- color: $primary-color;
-}
-}
-.cover{
-@include flex($direction:row);
-gap: 5%;
-.cover-leftSide{
-@include flex($aligin-items:flex-start);
-margin-bottom: 20px;
-gap: 20px;
-h1{
- color:white;
-}
-p{
- color: white;
- font-size: 12px;
- line-height: 1.75;
-}
-button{
-@include button($horizontal-padding:50px,$vertical-padding:12px,$border-radius:0px);
- background-color: white;
- color: $primary-color;
-}
-}
-.cover-rightSide{
-margin-top:40px;
-@include flex($direction:row);
-img{
- width:70%;
- height:auto;
-}
-}
-}
-}
-.nav-prices{
-@include flex();
-gap: 30px;
-align-self: flex-start;
-.onePrice{
-@include flex($direction:row);
-gap: 8px;
-p{
-align-self:flex-end;
-color: white;
-font-size: 1.2em;
-font-weight:550;
-}
+     font-weight: 500;
+     list-style: none;
+     @include flex($direction:row,$justify-content:flex-start);
+     gap: 35%;
+     color: white;
+
+li{
+    cursor: pointer;
 }
 
-.amazon{
-color: white;
-width: 50px;
-height: auto;
+
+}}
+.img{
+    width:140px;
+    height: auto;
+    padding-left: 30px;
 }
-}
-.p{
- color: white;
- text-align: center;
+.search_box{
+    position: relative;
+    width: 250px;
+  }
+    
+  
+.search_box__input {
+      outline: none;
+      background: rgba(0,0,0,0.85);
+      border: solid 1px rgba(255,255,255,0.85);
+      box-sizing: border-box;
+      padding: 7px 14px 7px 40px;
+      width: 0%;
+      font-size: 13px;
+      color: #fff;
+      opacity: 0;
+      transition: ease width 1s, ease opacity 1s;
+      float: right;
+  }
+      
+  
+.search_box__icon{
+      position: absolute;
+      top: 7px;
+      color: white;
+      z-index: 10;
+      cursor: pointer;
+      right: 12px;
+      transition: ease transform 1s;
+      transition-delay: 50ms;
+.active{
+.search_box__icon{
+      width:-214px;
+  }
+.search_box__input{
+        opacity: 1;
+        width: 100%;
+  }
+        
+  
+  }
+  
+  
 }
 
 

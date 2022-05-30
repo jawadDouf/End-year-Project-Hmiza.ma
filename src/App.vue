@@ -1,12 +1,13 @@
 <template>
   <nav>
-  
+  <Nav/>
   </nav>
   <router-view/>
+  <Footer />
 </template>
 <script setup>
-
-
+import Nav from "./components/globalComp/nav2.vue";
+import Footer from "./components/globalComp/footer.vue"
 
 </script>
 

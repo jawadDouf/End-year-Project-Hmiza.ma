@@ -1,17 +1,7 @@
 @import "@/sass/variables.scss";
 @import "@/sass/mexins.scss";
 @import "@/sass/mediaquerise.scss";
-.container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    height: 450px;
-    box-shadow: black 0px 0px 10px;
-    @include flex();
-    color: white;
-    background-color: hsla(0, 0%, 0%, 0);
+
 .container_title{
  width: 50px;
  height: auto;
@@ -63,7 +53,6 @@ margin-block: 30px;
 a{
   margin-left: 38%;
   cursor: pointer;
-}
 }
 }
 }
